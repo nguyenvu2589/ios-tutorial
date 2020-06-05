@@ -52,6 +52,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func tipSelector(_ sender: UIButton) {
+        view.endEditing(true)
         deselectTipPercentButton()
         customPercentDeSelect()
         
@@ -68,10 +69,11 @@ class ViewController: UIViewController {
     
     // add % for custom tips
     @IBAction func customTipSelector(_ sender: UITextField) {
-        deselectTipPercentButton()
-        customPercentSelecte()
-        tipPercent = sender.text
-        
+        if (sender.text != nil || sender.text != "") {
+            deselectTipPercentButton()
+            customPercentSelecte()
+            tipPercent = sender.text
+        }
 //        print(sender.title)
 //        if (sender.text != nil && ((sender.text?.contains("%")) != nil) ){
 //           sender.text! += "%"
@@ -98,3 +100,6 @@ class ViewController: UIViewController {
     
 }
 
+/*
+ dollar sign for total bill and custom
+ */

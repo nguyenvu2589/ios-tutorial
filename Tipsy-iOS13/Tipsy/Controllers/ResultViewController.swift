@@ -22,14 +22,14 @@ class ResultViewController: UIViewController {
             SplitTipsInWords.text = "Split between \(String(describing: numPep)), with \(self.tipPercent!)."
         }
         else {
-            SplitTipsInWords.text = "\(self.tipPercent!)."
+            SplitTipsInWords.text = "You pay with \(self.tipPercent!)."
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         updateTipsinWords()
-        totalPerPerson.text = amountPerPerson
+        totalPerPerson.text = "$\(amountPerPerson!)"
         
     }
     
