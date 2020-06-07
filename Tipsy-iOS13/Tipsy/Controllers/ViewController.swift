@@ -62,8 +62,15 @@ class ViewController: UIViewController {
     }
     // add $ sign to total amount after user enter
     @IBAction func totalAmountSelector(_ sender: UITextField) {
+//        let charset = CharacterSet(charactersIn: "$")
 //        if (sender.text != nil){
-//           sender.text! = "$" + sender.text!
+//            if let _ = sender.text!.rangeOfCharacter(from: charset, options: .caseInsensitive) {
+//               print("hey")
+//            }
+//            else {
+//                sender.text = "$ " + sender.text!
+//            }
+//
 //        }
     }
     

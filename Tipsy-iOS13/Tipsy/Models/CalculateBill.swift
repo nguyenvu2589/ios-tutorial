@@ -16,9 +16,10 @@ class CalculatorBill {
     
     init(total: String, tip: String, numPeep: String) {
         let cleanTip = tip.replacingOccurrences(of: "%", with: "", options: NSString.CompareOptions.literal, range: nil)
+        let cleanTotal = total.replacingOccurrences(of: "$", with: "", options: NSString.CompareOptions.literal, range: nil)
         
         self.tip = Double(cleanTip) ?? 10
-        self.total = Double(total) ?? 0
+        self.total = Double(cleanTotal) ?? 0
         self.numPeep = Double(numPeep) ?? 1
 
     }
