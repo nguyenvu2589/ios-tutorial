@@ -70,26 +70,26 @@ class ToDoListViewController: UITableViewController {
     }
     
     func saveItems(){
-        let encoder = PropertyListEncoder()
-        do{
-            let data = try encoder.encode(itemArray)
-            try data.write(to: self.dataFilePath!)
-        } catch {
-            print ("Error encode item, \(error)")
-        }
-        self.tableView.reloadData()
+//        let encoder = PropertyListEncoder()
+//        do{
+//            let data = try encoder.encode(itemArray)
+//            try data.write(to: self.dataFilePath!)
+//        } catch {
+//            print ("Error encode item, \(error)")
+//        }
+//        self.tableView.reloadData()
     }
     
     func loadItems(){
-        if let data = try? Data(contentsOf: dataFilePath!){
-            let decoder = PropertyListDecoder()
-            do {
-                itemArray = try decoder.decode([Item].self , from: data)
-            } catch {
-                print ("Error encode item, \(error)")
-            }
-            
-        }
+//        if let data = try? Data(contentsOf: dataFilePath!){
+//            let decoder = PropertyListDecoder()
+//            do {
+//                itemArray = try decoder.decode([Item].self , from: data)
+//            } catch {
+//                print ("Error encode item, \(error)")
+//            }
+//            
+//        }
     }
     
    
