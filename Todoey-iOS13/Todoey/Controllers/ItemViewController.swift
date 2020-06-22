@@ -11,6 +11,8 @@ import RealmSwift
 
 class ItemViewController: UITableViewController {
     let realm = try! Realm()
+    
+    @IBOutlet weak var searchBar: UISearchBar!
     var todoItems: Results<Item>?
     
     var selectedCategory:  Category? {
@@ -42,7 +44,18 @@ class ItemViewController: UITableViewController {
     }
       
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-
+        if let item = todoItems?[indexPath.row]{
+            do {
+                try realm.write{
+                    item.done = !item.done
+                }
+            } catch {
+                print("Error try to update \(error)")
+            }
+            
+        }
+        tableView.reloadData()
+        
     }
     
     
@@ -75,6 +88,21 @@ class ItemViewController: UITableViewController {
             textField.placeholder = "Add a new category"
         }
         present(alert, animated: true, completion: nil)
+    }
+    
+}
+
+extension ItemViewController: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        todoItems = todoItems?.filter("title CONTAINS[cd] %@", searchBar.text!).sorted(byKeyPath: "dateCreated", ascending: true)
+        tableView.reloadData()
+        
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchBar.text?.count == 0 {
+            loadItems()
+        }
     }
     
 }
