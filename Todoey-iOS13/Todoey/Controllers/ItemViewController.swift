@@ -9,7 +9,7 @@
 import UIKit
 import RealmSwift
 
-class ItemViewController: UITableViewController {
+class ItemViewController: SwipeTableViewController {
     let realm = try! Realm()
     
     @IBOutlet weak var searchBar: UISearchBar!
@@ -31,7 +31,7 @@ class ItemViewController: UITableViewController {
     }
       
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "TodoItemCell", for: indexPath)
+        let cell = super.tableView(tableView, cellForRowAt: indexPath)
         if let item = todoItems?[indexPath.row]{
             cell.textLabel?.text = item.title
             cell.accessoryType = item.done ? .checkmark : .none
@@ -62,6 +62,20 @@ class ItemViewController: UITableViewController {
     func loadItems() {
         todoItems = selectedCategory?.items.sorted(byKeyPath: "title", ascending: true)
     }
+    
+    override func updateModel(index: IndexPath) {
+        if let deleteItem = self.todoItems?[index.row]{
+            do {
+                try self.realm.write {
+                    self.realm.delete(deleteItem)
+                }
+            } catch {
+                print("Unable to delete \(error)")
+            }
+        }
+    }
+    
+    
     
     @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
         var textField = UITextField()

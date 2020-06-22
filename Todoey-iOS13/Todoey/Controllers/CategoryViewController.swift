@@ -55,6 +55,18 @@ class CategoryViewController: SwipeTableViewController {
         tableView.reloadData()
     }
     
+    override func updateModel(index: IndexPath) {
+        if let deleteCategory = self.categories?[index.row] {
+            do {
+                try self.realm.write {
+                    self.realm.delete(deleteCategory)
+                    
+                }
+            } catch {
+                print("Error saving new items, \(error)")
+            }
+        }
+    }
     
     //Mark: - Add New Categories
     @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {

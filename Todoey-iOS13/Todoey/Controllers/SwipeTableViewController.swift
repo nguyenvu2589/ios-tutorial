@@ -13,20 +13,13 @@ class SwipeTableViewController: UITableViewController, SwipeTableViewCellDelegat
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        tableView.rowHeight = 80
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-                let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! SwipeTableViewCell
-                cell.delegate = self
-                
-               
-                return cell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! SwipeTableViewCell
+        cell.delegate = self
+        return cell
     }
     
     
@@ -34,18 +27,9 @@ class SwipeTableViewController: UITableViewController, SwipeTableViewCellDelegat
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath, for orientation: SwipeActionsOrientation) -> [SwipeAction]? {
         guard orientation == .right else { return nil }
         let deleteAction = SwipeAction(style: .destructive, title: "Delete") { action, indexPath in
-            
-//            if let deleteCategory = self.categories?[indexPath.row] {
-//                do {
-//                    try self.realm.write {
-//                        self.realm.delete(deleteCategory)
-//
-//                    }
-//                } catch {
-//                    print("Error saving new items, \(error)")
-//                }
-//            }
+            self.updateModel(index: indexPath)
         }
+        
         deleteAction.image = UIImage(named: "delete-icon")
         return [deleteAction]
     }
@@ -57,7 +41,7 @@ class SwipeTableViewController: UITableViewController, SwipeTableViewCellDelegat
     }
         
     func updateModel( index: IndexPath){
-        
+        // update modal
     }
    
 
