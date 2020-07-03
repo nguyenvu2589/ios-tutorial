@@ -13,6 +13,7 @@ import Vision
 class ViewController: UIViewController , UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var resultLabel: UILabel!
     
     let imagePicker = UIImagePickerController()
     
@@ -42,7 +43,12 @@ class ViewController: UIViewController , UIImagePickerControllerDelegate, UINavi
             guard let results = request.results as? [VNClassificationObservation] else {
                 fatalError("Model failed to process image")
             }
-            print(results)
+            
+            if let firstResult = results.first {
+                self.resultLabel.text = firstResult.identifier
+                self.resultLabel.sizeToFit()
+                
+            }
         }
         let handler = VNImageRequestHandler(ciImage: image)
         
