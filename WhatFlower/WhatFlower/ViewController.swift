@@ -9,10 +9,16 @@
 import UIKit
 import CoreML
 import Vision
+import Alamofire
+import SwiftyJSON
+
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var displayImage: UIImageView!
+    @IBOutlet weak var displayLabel: UILabel!
+    
+    
     let imagePicker = UIImagePickerController()
     
     override func viewDidLoad() {
@@ -45,6 +51,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             if let firstResult = results.first {
                 self.navigationItem.title = firstResult.identifier.capitalized
                 print(firstResult.identifier)
+                self.getFlowerDetailFromWiki(flowerName: firstResult.identifier)
                 
             }
         }
@@ -59,6 +66,30 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     @IBAction func cameraButtonPressed(_ sender: UIBarButtonItem) {
         present(imagePicker, animated: true, completion: nil)
+    }
+    
+    func getFlowerDetailFromWiki(flowerName: String) {
+        let wikipediaURl = "https://en.wikipedia.org/w/api.php"
+
+        let parameters : [String:String] = [
+        "format" : "json",
+        "action" : "query",
+        "prop" : "extracts",
+        "exintro" : "",
+        "explaintext" : "",
+        "titles" : flowerName,
+        "indexpageids" : "",
+        "redirects" : "1",
+        ]
+        let request = AF.request(wikipediaURl, parameters: parameters)
+        request.responseJSON { (data) in
+            let result = JSON(data.value!)
+            let page_id = result["query"]["pageids"][0].stringValue
+            self.displayLabel.text = result["query"]["pages"][page_id]["extract"].stringValue
+            print(data)
+            
+            
+        }
     }
     
 }
