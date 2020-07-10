@@ -1,3 +1,13 @@
+//csv structure
+//class   text
+//pos
+//neg
+//neutral
+
+// Train text model to classify sentiment on Tweet with ~ 70% confident
+// input: String
+// output: String pos, neg, neutral
+
 import Cocoa
 import CreateML
 
@@ -14,10 +24,9 @@ let metadata = MLModelMetadata(author: "vnguyen", shortDescription: "Model train
 try sentimentClassifier.write(to: URL(fileURLWithPath: "/Users/vnguyen/Desktop/code/ios/Twittermenti-iOS13/TweetSentimentClassifier.mlmodel"))
 
 
-try sentimentClassifier.prediction(from: "@you this is a bad one")
+try sentimentClassifier.prediction(from: "@you This is not good")
 
-try sentimentClassifier.prediction(from: "whaaaat? Nooooo")
+try sentimentClassifier.prediction(from: "@this is overrated")
 
-try sentimentClassifier.prediction(from: "whaaaat? Nooooo")
-
-try sentimentClassifier.prediction(from: "whatever")
+try sentimentClassifier.prediction(from: "Create ML is pretty cool")
+try sentimentClassifier.prediction(from: "I'm not sure how I feel about that")
