@@ -14,4 +14,8 @@ WhatDog app analyzes and identifies a dog by its breed using a smartphone camer
 - Model was trained using CREATE ML
 - training accuracy: 85%
 - validation accuracy: 64%
-- could increase accuracy by add Augmentations (I couldn't do it due to hardware limitation, jk... I just don't wanna wait)
+- could increase accuracy by adding Augmentations (I couldn't do it due to hardware limitation, jk... I just don't wanna wait)
+
+## TODO
+- Add wiki api call for dog description.
+- Train model with Augmentations ops.
