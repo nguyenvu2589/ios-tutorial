@@ -60,7 +60,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             node.addChildNode(planNode)
             
             if let detectedImage = imageAnchor.referenceImage.name{
-                if detectedImage == "ace_of_space" {
+                if detectedImage == "ace_of_spade" {
                     renderMonster(planNode: planNode, monsterType: "cyborg.usdz", scale: 0.15)
                 }
                 if (detectedImage == "dollar-bill-front" || detectedImage == "dollar-bill-back") {

@@ -1,7 +1,7 @@
 {
   "images" : [
     {
-      "filename" : "ace_of_space.png",
+      "filename" : "ace_of_spade.png",
       "idiom" : "universal"
     }
   ],
@@ -10,6 +10,6 @@
     "version" : 1
   },
   "properties" : {
-    "width" : 0.059999999999999998
+    "width" : 0.59999999999999998
   }
 }
