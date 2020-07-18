@@ -5,6 +5,15 @@
   },
   "resources" : [
     {
+      "filename" : "ace_of_space.arreferenceimage"
+    },
+    {
+      "filename" : "dollar-bill-back.arreferenceimage"
+    },
+    {
+      "filename" : "dollar-bill-front.arreferenceimage"
+    },
+    {
       "filename" : "jack_of_heart.arreferenceimage"
     }
   ]

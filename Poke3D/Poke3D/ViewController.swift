@@ -19,6 +19,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         
         // Set the view's delegate
         sceneView.delegate = self
+        sceneView.autoenablesDefaultLighting = true
         
         // Show statistics such as fps and timing information
         sceneView.showsStatistics = true
@@ -33,10 +34,9 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         let configuration = ARImageTrackingConfiguration()
         if let imageToTrack = ARReferenceImage.referenceImages(inGroupNamed: "Cards", bundle: .main){
             configuration.trackingImages = imageToTrack
-            configuration.maximumNumberOfTrackedImages = 1
-            print("Found")
+            configuration.maximumNumberOfTrackedImages = 3
+            
         }
-        
         
         // Run the view's session
         sceneView.session.run(configuration)
@@ -49,29 +49,51 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         sceneView.session.pause()
     }
 
-    // MARK: - ARSCNViewDelegate
-    
-/*
-    // Override to create and configure nodes for anchors added to the view's session.
+//     Found the card
     func renderer(_ renderer: SCNSceneRenderer, nodeFor anchor: ARAnchor) -> SCNNode? {
         let node = SCNNode()
-     
+        if let imageAnchor = anchor as? ARImageAnchor {
+            let plan = SCNPlane(width: imageAnchor.referenceImage.physicalSize.width, height: imageAnchor.referenceImage.physicalSize.height)
+            plan.firstMaterial?.diffuse.contents = UIColor(white: 1.0, alpha: 0.5)
+            let planNode = SCNNode(geometry: plan)
+            planNode.eulerAngles.x = -.pi / 2
+            node.addChildNode(planNode)
+            
+            if let detectedImage = imageAnchor.referenceImage.name{
+                if detectedImage == "ace_of_space" {
+                    renderMonster(planNode: planNode, monsterType: "cyborg.usdz", scale: 0.15)
+                }
+                if (detectedImage == "dollar-bill-front" || detectedImage == "dollar-bill-back") {
+                    
+                    renderMonster(planNode: planNode, monsterType: "snake_dancing.usdz", scale: 0.25)
+                }
+                if detectedImage == "jack_of_heart" {
+                    renderMonster(planNode: planNode, monsterType: "monster.usdz", scale: 0.05)
+                }
+            }
+        }
         return node
     }
-*/
     
-    func session(_ session: ARSession, didFailWithError error: Error) {
-        // Present an error message to the user
-        
-    }
-    
-    func sessionWasInterrupted(_ session: ARSession) {
-        // Inform the user that the session has been interrupted, for example, by presenting an overlay
-        
-    }
-    
-    func sessionInterruptionEnded(_ session: ARSession) {
-        // Reset tracking and/or remove existing anchors if consistent tracking is required
-        
+    func renderMonster (planNode : SCNNode, monsterType : String, scale: Float) {
+        if let monsterScene = SCNScene(named: "art.scnassets/\(monsterType)") {
+           
+            
+            if let monsterNode = monsterScene.rootNode.childNodes.first{
+                // adding material
+                // material
+//                let material = SCNMaterial()
+//                material.diffuse.contents = UIImage(named: "girl_diffuse.png")
+//                monsterNode.geometry?.materials = [material]
+                
+                monsterNode.eulerAngles.x = .pi / 2
+                monsterNode.scale.x = scale
+                monsterNode.scale.y = scale
+                monsterNode.scale.z = scale
+                
+                planNode.addChildNode(monsterNode)
+            }
+            
+        }
     }
 }
