@@ -6,3 +6,9 @@
 //
 
 import Foundation
+struct Tweet {
+    let user: String?
+    let text: String?
+    let profile_url: String?
+    let media_url: String?
+}

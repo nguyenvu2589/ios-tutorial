@@ -1,0 +1,542 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6C456A5B258926D700ABEC0E /* TweetSentimentClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 6C456A5A258926D700ABEC0E /* TweetSentimentClassifier.mlmodel */; };
+		6C8B0B8125632721008F01D8 /* SwifteriOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C8B0B73256326B5008F01D8 /* SwifteriOS.framework */; };
+		6C8B0B8225632721008F01D8 /* SwifteriOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6C8B0B73256326B5008F01D8 /* SwifteriOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6C8B0B8825662BAE008F01D8 /* API Key.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6C8B0B8725662BAE008F01D8 /* API Key.plist */; };
+		6C98008425847E240005A88A /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C98008325847E240005A88A /* Tweet.swift */; };
+		6CEE3930254A0620005C2CEB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CEE392F254A0620005C2CEB /* AppDelegate.swift */; };
+		6CEE3932254A0620005C2CEB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CEE3931254A0620005C2CEB /* SceneDelegate.swift */; };
+		6CEE3934254A0620005C2CEB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CEE3933254A0620005C2CEB /* ViewController.swift */; };
+		6CEE3937254A0620005C2CEB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CEE3935254A0620005C2CEB /* Main.storyboard */; };
+		6CEE3939254A0626005C2CEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6CEE3938254A0626005C2CEB /* Assets.xcassets */; };
+		6CEE393C254A0626005C2CEB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CEE393A254A0626005C2CEB /* LaunchScreen.storyboard */; };
+		AE4AE0BFF3B8C8537F845CB7 /* Pods_MeLazy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39E2D3552293D6588E9E9347 /* Pods_MeLazy.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6C8B0B72256326B5008F01D8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6C8B0B6A256326B5008F01D8 /* Swifter.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8B9F50EE1944A5AB00894629;
+			remoteInfo = SwifteriOS;
+		};
+		6C8B0B74256326B5008F01D8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6C8B0B6A256326B5008F01D8 /* Swifter.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8B9F51131944A61D00894629;
+			remoteInfo = SwifterMac;
+		};
+		6C8B0B76256326B5008F01D8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6C8B0B6A256326B5008F01D8 /* Swifter.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8B300C1F1944AA1A00993175;
+			remoteInfo = SwifterDemoiOS;
+		};
+		6C8B0B78256326B5008F01D8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6C8B0B6A256326B5008F01D8 /* Swifter.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8B300C471944AECB00993175;
+			remoteInfo = SwifterDemoMac;
+		};
+		6C8B0B7A256326B5008F01D8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6C8B0B6A256326B5008F01D8 /* Swifter.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F6B4D5751C7BAC4500E06514;
+			remoteInfo = SwifterTests;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		6C8B0B8325632721008F01D8 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				6C8B0B8225632721008F01D8 /* SwifteriOS.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		39E2D3552293D6588E9E9347 /* Pods_MeLazy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MeLazy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C456A5A258926D700ABEC0E /* TweetSentimentClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = TweetSentimentClassifier.mlmodel; sourceTree = SOURCE_ROOT; };
+		6C8B0B6A256326B5008F01D8 /* Swifter.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Swifter.xcodeproj; path = Swifter/Swifter.xcodeproj; sourceTree = "<group>"; };
+		6C8B0B8725662BAE008F01D8 /* API Key.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "API Key.plist"; sourceTree = "<group>"; };
+		6C98008325847E240005A88A /* Tweet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
+		6CEE392C254A0620005C2CEB /* MeLazy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeLazy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6CEE392F254A0620005C2CEB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6CEE3931254A0620005C2CEB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		6CEE3933254A0620005C2CEB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6CEE3936254A0620005C2CEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6CEE3938254A0626005C2CEB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6CEE393B254A0626005C2CEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6CEE393D254A0626005C2CEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C9EC0AD6F78E30E35B495619 /* Pods-MeLazy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeLazy.release.xcconfig"; path = "Target Support Files/Pods-MeLazy/Pods-MeLazy.release.xcconfig"; sourceTree = "<group>"; };
+		CE756C2A0323D9BCF832CCCB /* Pods-MeLazy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeLazy.debug.xcconfig"; path = "Target Support Files/Pods-MeLazy/Pods-MeLazy.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6CEE3929254A0620005C2CEB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6C8B0B8125632721008F01D8 /* SwifteriOS.framework in Frameworks */,
+				AE4AE0BFF3B8C8537F845CB7 /* Pods_MeLazy.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6C8B0B6B256326B5008F01D8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6C8B0B73256326B5008F01D8 /* SwifteriOS.framework */,
+				6C8B0B75256326B5008F01D8 /* SwifterMac.framework */,
+				6C8B0B77256326B5008F01D8 /* SwifterDemoiOS.app */,
+				6C8B0B79256326B5008F01D8 /* SwifterDemoMac.app */,
+				6C8B0B7B256326B5008F01D8 /* SwifterTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6C8B0B8025632721008F01D8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				39E2D3552293D6588E9E9347 /* Pods_MeLazy.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6CEE3923254A0620005C2CEB = {
+			isa = PBXGroup;
+			children = (
+				6C8B0B6A256326B5008F01D8 /* Swifter.xcodeproj */,
+				6CEE392E254A0620005C2CEB /* MeLazy */,
+				6CEE392D254A0620005C2CEB /* Products */,
+				6C8B0B8025632721008F01D8 /* Frameworks */,
+				9BB21BA0227ADA9A3BB65251 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		6CEE392D254A0620005C2CEB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6CEE392C254A0620005C2CEB /* MeLazy.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6CEE392E254A0620005C2CEB /* MeLazy */ = {
+			isa = PBXGroup;
+			children = (
+				6C456A5A258926D700ABEC0E /* TweetSentimentClassifier.mlmodel */,
+				6CEE392F254A0620005C2CEB /* AppDelegate.swift */,
+				6CEE3931254A0620005C2CEB /* SceneDelegate.swift */,
+				6CEE3933254A0620005C2CEB /* ViewController.swift */,
+				6C98008325847E240005A88A /* Tweet.swift */,
+				6C8B0B8725662BAE008F01D8 /* API Key.plist */,
+				6CEE3935254A0620005C2CEB /* Main.storyboard */,
+				6CEE3938254A0626005C2CEB /* Assets.xcassets */,
+				6CEE393A254A0626005C2CEB /* LaunchScreen.storyboard */,
+				6CEE393D254A0626005C2CEB /* Info.plist */,
+			);
+			path = MeLazy;
+			sourceTree = "<group>";
+		};
+		9BB21BA0227ADA9A3BB65251 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CE756C2A0323D9BCF832CCCB /* Pods-MeLazy.debug.xcconfig */,
+				C9EC0AD6F78E30E35B495619 /* Pods-MeLazy.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6CEE392B254A0620005C2CEB /* MeLazy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6CEE3940254A0626005C2CEB /* Build configuration list for PBXNativeTarget "MeLazy" */;
+			buildPhases = (
+				98ADE865A06F30AA8B054D8D /* [CP] Check Pods Manifest.lock */,
+				6CEE3928254A0620005C2CEB /* Sources */,
+				6CEE3929254A0620005C2CEB /* Frameworks */,
+				6CEE392A254A0620005C2CEB /* Resources */,
+				6C8B0B8325632721008F01D8 /* Embed Frameworks */,
+				F424F8D079A9E1A8562BABC9 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MeLazy;
+			productName = MeLazy;
+			productReference = 6CEE392C254A0620005C2CEB /* MeLazy.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6CEE3924254A0620005C2CEB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1200;
+				LastUpgradeCheck = 1200;
+				TargetAttributes = {
+					6CEE392B254A0620005C2CEB = {
+						CreatedOnToolsVersion = 12.0.1;
+					};
+				};
+			};
+			buildConfigurationList = 6CEE3927254A0620005C2CEB /* Build configuration list for PBXProject "MeLazy" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6CEE3923254A0620005C2CEB;
+			productRefGroup = 6CEE392D254A0620005C2CEB /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 6C8B0B6B256326B5008F01D8 /* Products */;
+					ProjectRef = 6C8B0B6A256326B5008F01D8 /* Swifter.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				6CEE392B254A0620005C2CEB /* MeLazy */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		6C8B0B73256326B5008F01D8 /* SwifteriOS.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SwifteriOS.framework;
+			remoteRef = 6C8B0B72256326B5008F01D8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6C8B0B75256326B5008F01D8 /* SwifterMac.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SwifterMac.framework;
+			remoteRef = 6C8B0B74256326B5008F01D8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6C8B0B77256326B5008F01D8 /* SwifterDemoiOS.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = SwifterDemoiOS.app;
+			remoteRef = 6C8B0B76256326B5008F01D8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6C8B0B79256326B5008F01D8 /* SwifterDemoMac.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = SwifterDemoMac.app;
+			remoteRef = 6C8B0B78256326B5008F01D8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6C8B0B7B256326B5008F01D8 /* SwifterTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = SwifterTests.xctest;
+			remoteRef = 6C8B0B7A256326B5008F01D8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6CEE392A254A0620005C2CEB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6CEE393C254A0626005C2CEB /* LaunchScreen.storyboard in Resources */,
+				6CEE3939254A0626005C2CEB /* Assets.xcassets in Resources */,
+				6C8B0B8825662BAE008F01D8 /* API Key.plist in Resources */,
+				6CEE3937254A0620005C2CEB /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		98ADE865A06F30AA8B054D8D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MeLazy-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F424F8D079A9E1A8562BABC9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MeLazy/Pods-MeLazy-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MeLazy/Pods-MeLazy-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MeLazy/Pods-MeLazy-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6CEE3928254A0620005C2CEB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6CEE3934254A0620005C2CEB /* ViewController.swift in Sources */,
+				6C456A5B258926D700ABEC0E /* TweetSentimentClassifier.mlmodel in Sources */,
+				6C98008425847E240005A88A /* Tweet.swift in Sources */,
+				6CEE3930254A0620005C2CEB /* AppDelegate.swift in Sources */,
+				6CEE3932254A0620005C2CEB /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		6CEE3935254A0620005C2CEB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6CEE3936254A0620005C2CEB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6CEE393A254A0626005C2CEB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6CEE393B254A0626005C2CEB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6CEE393E254A0626005C2CEB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6CEE393F254A0626005C2CEB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6CEE3941254A0626005C2CEB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE756C2A0323D9BCF832CCCB /* Pods-MeLazy.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LHD8HRL46X;
+				INFOPLIST_FILE = MeLazy/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.vnguyen.MeLazy;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6CEE3942254A0626005C2CEB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C9EC0AD6F78E30E35B495619 /* Pods-MeLazy.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LHD8HRL46X;
+				INFOPLIST_FILE = MeLazy/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.vnguyen.MeLazy;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6CEE3927254A0620005C2CEB /* Build configuration list for PBXProject "MeLazy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6CEE393E254A0626005C2CEB /* Debug */,
+				6CEE393F254A0626005C2CEB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6CEE3940254A0626005C2CEB /* Build configuration list for PBXNativeTarget "MeLazy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6CEE3941254A0626005C2CEB /* Debug */,
+				6CEE3942254A0626005C2CEB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6CEE3924254A0620005C2CEB /* Project object */;
+}
