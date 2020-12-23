@@ -35,12 +35,15 @@ http://help.sentiment140.com/for-students
 
 # Sample
 Positive
+
 ![Sample happy](melazy_happy.png)
 
 Neutral
+
 ![Sample meh](melazy_meh.png)
 
 Negative
+
 ![Sample sad](melazy_sad.png)
 
 
