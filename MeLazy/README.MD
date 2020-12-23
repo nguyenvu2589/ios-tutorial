@@ -13,7 +13,7 @@ Just in case, you don't want to do such work, you can use MeLazy. Melazy can hel
 Every simple app. 
 User can type search keyword in search box then click on Predit. App will display result in Emoji box, also display 5 tweets.
 
-![App Design](MeLazy Design.png)
+![App Design](melazy_design.png)
 
 # Data set
 3 datasets with about 1.7M records 
