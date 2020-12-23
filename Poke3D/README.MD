@@ -5,7 +5,7 @@ Compatible with iOs 13.0 +
 
 ![Sample 1](sample_image/IMG_5170.PNG)
 ![Sample 2](sample_image/IMG_5171.PNG)
-![Sample 3](sample_image/IMG_5172.PNG)
+![Sample 3 -hor](sample_image/IMG_5172.PNG)
 #
 - Using ScenceKit and image detection. 
 - 3D characters from: https://www.mixamo.com/
